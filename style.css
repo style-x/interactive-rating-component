@@ -11,6 +11,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,14 +24,19 @@ body {
 }
 
 main {
-  background-color: var(--clr-darkblue);
+  background: linear-gradient(0deg, hsl(216, 12%, 8%) -30%, hsl(213, 19%, 18%) 130%);
   max-width: 20rem;
   padding: 1rem;
   border-radius: 1rem;
 }
 
 .star {
-  padding: 0.5rem;
+  padding: 0.7rem;
+  line-height: 0.7rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--clr-darkblue);
+  border-radius: 50%;
 }
 
 h1 {
@@ -40,16 +46,56 @@ p {
   padding: 0.5rem;
 }
 
+.radio-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  position: relative;
+  align-items: center;
+}
+
+.radio {
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: var(--clr-darkblue);
+}
+
+.radio:hover {
+  background-color: var(--clr-orange);
+}
+
+input[type=radio] {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  position: absolute;
+}
+
+input[type=radio]:checked + .radio {
+  background-color: var(--clr-lightgrey);
+}
+
+.radio label {
+  padding: 1rem;
+  line-height: 2.5rem;
+  color: var(--clr-lightgrey);
+}
+
 .submit {
+  margin: 0.5rem;
   padding: 0.7rem;
   border-radius: 1.4rem;
-  width: 100%;
+  width: calc(100% - 1rem);
   border-color: transparent;
   background-color: var(--clr-orange);
 }
 
 .section-1 {
-
+  font-family: sans-serif;
 }
 
 .section-2 {
